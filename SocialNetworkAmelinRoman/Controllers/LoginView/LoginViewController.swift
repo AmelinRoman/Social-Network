@@ -62,7 +62,8 @@ class LoginViewController: UIViewController {
         let alertController = UIAlertController(title: "Error", message: "Wrong login or password", preferredStyle: .alert)
         let alertItem = UIAlertAction(title: "Okey", style: .cancel)
         
-    { _ in
+    { [weak self] _ in
+        guard let self = self else {return}
             self.loginTextField.text = ""
             self.passwordTextField.text = ""
         }
