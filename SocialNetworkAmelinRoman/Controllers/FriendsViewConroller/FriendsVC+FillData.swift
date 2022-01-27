@@ -30,6 +30,7 @@ extension FriendsViewController {
             Friends(nameFriend: "Zendaya", avatarName: "Ze_1", arrayAvatar: ["Ze_1", "Ze_2", "Ze_3", "Ze_4"])
         ]
         
+        
         for i in friendsList {
             arrayFriendsList.append(i)
         }

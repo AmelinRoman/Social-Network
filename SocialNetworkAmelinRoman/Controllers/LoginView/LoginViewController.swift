@@ -12,8 +12,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     let loginSegue = "loginButtom"
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.transition(with: titleLabel, duration: 3, options: .transitionFlipFromTop, animations: {[weak self] in
+            self?.titleLabel.text = "Social Network"
+        })
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +36,6 @@ class LoginViewController: UIViewController {
         self.view.addGestureRecognizer(recognizer)
         // Do any additional setup after loading the view.
     }
-    
     
     @objc func keyboarDidShow(_ notificatoin: Notification) {
         // - получаем размер клавитуры пользователя
@@ -92,7 +101,7 @@ class LoginViewController: UIViewController {
       // - делаем значение не опциональным 
         if isValid() {
             
-            performSegue(withIdentifier: "loginButtom", sender: nil)
+            performSegue(withIdentifier: loginSegue, sender: nil)
             
         } else {
             

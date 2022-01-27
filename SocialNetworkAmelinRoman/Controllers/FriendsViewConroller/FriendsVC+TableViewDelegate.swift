@@ -12,7 +12,6 @@ extension FriendsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return heightFriendCell
-        
     }
     // - Проверка segue и передача данных
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,10 +24,10 @@ extension FriendsViewController: UITableViewDelegate {
     }
      // - Обработка нажатия, передача данных и переход на следующий Controller 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let friendFotoArray = arrayFriendsList[indexPath.item].arrayAvatar {
-        performSegue(withIdentifier: friendToGallerySegue, sender: friendFotoArray)
-        
+        if let friendFotoArray = searchFriendResult[indexPath.item].arrayAvatar {
+            performSegue(withIdentifier: friendToGallerySegue, sender: friendFotoArray)
+        }
     }
-  }
-    
 }
+
+

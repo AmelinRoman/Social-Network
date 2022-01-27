@@ -14,7 +14,7 @@ extension FriendsViewController: UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
         // - Регистрируем xib
-        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: friendsIdentifier)
+        tableView.register(UINib(nibName: "FriendsTableViewCell", bundle: nil), forCellReuseIdentifier: friendsIdentifier)
         
     }
     // - Функция возвращение количество секций
@@ -26,15 +26,26 @@ extension FriendsViewController: UITableViewDataSource {
     // - Функция кол-ва ячеек равной кол-ву элементов в массиве
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return arrayFriendsList.count
+        return searchFriendResult.count
         
     }
+    
+    /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        let section = friendLoader.loaderFriend()[section]
+        return String(section.key)
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        
+        return headerName
+    }*/
     // - Передача данных в ячейку
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // - Вызываем Cell
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: friendsIdentifier, for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: friendsIdentifier, for: indexPath) as? FriendsTableViewCell else {return UITableViewCell()}
         // - Передаем данные
-        cell.configure(friends: arrayFriendsList[indexPath.row])
+        cell.configure(friends: searchFriendResult[indexPath.row])
         // - Возвращаем данные
         return cell
     }

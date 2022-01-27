@@ -33,14 +33,14 @@ class CustomTableViewCell: UITableViewCell {
         
     }
     // - Фунция для работы со структурой Друзья
-    func configure(friends: Friends) {
+   /* func configure(friends: Friends) {
         
         if let imageName = friends.avatarName {
             customImageView.image = UIImage(named: imageName)
         }
         customLabel.text = friends.nameFriend
         
-    }
+    }*/
     // - Фунция для работы со структурой Групп
     func configure(group: Group) {
         if let imageName = group.avatarGroupName {
