@@ -46,6 +46,7 @@
 		CCBCE9E0274D06340002CB18 /* FriendsVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9DF274D06340002CB18 /* FriendsVC+TableViewDelegate.swift */; };
 		CCBCE9E2274D06460002CB18 /* FriendsVC+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9E1274D06460002CB18 /* FriendsVC+FillData.swift */; };
 		CCD2E36B276DCBE100C5ECB7 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E36A276DCBE100C5ECB7 /* CustomSegue.swift */; };
+		CCDF302727B533F100E893B5 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF302627B533F100E893B5 /* Singleton.swift */; };
 		CCE34A5E27520ED60054FFDF /* FriendPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE34A5D27520ED60054FFDF /* FriendPhotoViewController.swift */; };
 		CCE34A69275216FE0054FFDF /* FriendPhotoVC+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE34A68275216FE0054FFDF /* FriendPhotoVC+FillData.swift */; };
 		CCE34A78275762F200952C88 /* FriendsVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE34A77275762F200952C88 /* FriendsVC+SearchBarDelegate.swift */; };
@@ -93,6 +94,7 @@
 		CCBCE9DF274D06340002CB18 /* FriendsVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		CCBCE9E1274D06460002CB18 /* FriendsVC+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+FillData.swift"; sourceTree = "<group>"; };
 		CCD2E36A276DCBE100C5ECB7 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		CCDF302627B533F100E893B5 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		CCE34A5D27520ED60054FFDF /* FriendPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewController.swift; sourceTree = "<group>"; };
 		CCE34A68275216FE0054FFDF /* FriendPhotoVC+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendPhotoVC+FillData.swift"; sourceTree = "<group>"; };
 		CCE34A77275762F200952C88 /* FriendsVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				CCB7A680274CD11000C9BB8D /* Friends.swift */,
 				CCB7A682274CD11A00C9BB8D /* Group.swift */,
+				CCDF302627B533F100E893B5 /* Singleton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				CCBCE9D4274CFB5E0002CB18 /* AllGroupViewController.swift in Sources */,
 				CCB7A681274CD11000C9BB8D /* Friends.swift in Sources */,
 				CC86BEC62770D888006F3144 /* CustomPopAnimate.swift in Sources */,
+				CCDF302727B533F100E893B5 /* Singleton.swift in Sources */,
 				CC3D91092750F4060043E20E /* GalleryFriendViewController.swift in Sources */,
 				CC7BC0A02756291C00B9C926 /* FriendsTableViewCell.swift in Sources */,
 				CCBCE9D2274CF6460002CB18 /* MyGroupVC+FillData.swift in Sources */,
