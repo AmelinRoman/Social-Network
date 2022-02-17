@@ -15,6 +15,7 @@ extension MyGroupViewController: UITableViewDataSource {
         tableView.delegate = self
         // - Регистрируем xib
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: myGroupIdentifier)
+        NetworkService().loadUsersGroups()
         
     }
     // - Функция возвращение количество секций

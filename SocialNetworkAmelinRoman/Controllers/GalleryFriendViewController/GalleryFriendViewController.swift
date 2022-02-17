@@ -20,6 +20,7 @@ class GalleryFriendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        
     }
 
 }

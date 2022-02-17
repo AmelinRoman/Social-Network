@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45AEBF0D85F40DC020F4EBE4 /* Pods_SocialNetworkAmelinRoman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6948DA5B3FE4EFCB1CF8FC /* Pods_SocialNetworkAmelinRoman.framework */; };
 		CC0F1AB6275F588000E35737 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F1AB5275F588000E35737 /* LoadingScreenViewController.swift */; };
 		CC18F6F9276C789800DED829 /* SectionFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18F6F8276C789800DED829 /* SectionFriends.swift */; };
 		CC18F6FB276C7A9000DED829 /* FriendsLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18F6FA276C7A9000DED829 /* FriendsLoaderService.swift */; };
@@ -47,12 +48,17 @@
 		CCBCE9E2274D06460002CB18 /* FriendsVC+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9E1274D06460002CB18 /* FriendsVC+FillData.swift */; };
 		CCD2E36B276DCBE100C5ECB7 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E36A276DCBE100C5ECB7 /* CustomSegue.swift */; };
 		CCDF302727B533F100E893B5 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF302627B533F100E893B5 /* Singleton.swift */; };
+		CCDF302927BA4CDF00E893B5 /* VKLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF302827BA4CDF00E893B5 /* VKLoginVC.swift */; };
 		CCE34A5E27520ED60054FFDF /* FriendPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE34A5D27520ED60054FFDF /* FriendPhotoViewController.swift */; };
 		CCE34A69275216FE0054FFDF /* FriendPhotoVC+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE34A68275216FE0054FFDF /* FriendPhotoVC+FillData.swift */; };
 		CCE34A78275762F200952C88 /* FriendsVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE34A77275762F200952C88 /* FriendsVC+SearchBarDelegate.swift */; };
+		CCE64C4227BD0E5500BC3686 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE64C4127BD0E5500BC3686 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84BA5670786723719E3E159F /* Pods-SocialNetworkAmelinRoman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkAmelinRoman.debug.xcconfig"; path = "Target Support Files/Pods-SocialNetworkAmelinRoman/Pods-SocialNetworkAmelinRoman.debug.xcconfig"; sourceTree = "<group>"; };
+		8A6948DA5B3FE4EFCB1CF8FC /* Pods_SocialNetworkAmelinRoman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetworkAmelinRoman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1C6323F8D03696BC3A4318 /* Pods-SocialNetworkAmelinRoman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworkAmelinRoman.release.xcconfig"; path = "Target Support Files/Pods-SocialNetworkAmelinRoman/Pods-SocialNetworkAmelinRoman.release.xcconfig"; sourceTree = "<group>"; };
 		CC0F1AB5275F588000E35737 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		CC18F6F8276C789800DED829 /* SectionFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFriends.swift; sourceTree = "<group>"; };
 		CC18F6FA276C7A9000DED829 /* FriendsLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsLoaderService.swift; sourceTree = "<group>"; };
@@ -95,9 +101,11 @@
 		CCBCE9E1274D06460002CB18 /* FriendsVC+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+FillData.swift"; sourceTree = "<group>"; };
 		CCD2E36A276DCBE100C5ECB7 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		CCDF302627B533F100E893B5 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		CCDF302827BA4CDF00E893B5 /* VKLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginVC.swift; sourceTree = "<group>"; };
 		CCE34A5D27520ED60054FFDF /* FriendPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewController.swift; sourceTree = "<group>"; };
 		CCE34A68275216FE0054FFDF /* FriendPhotoVC+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendPhotoVC+FillData.swift"; sourceTree = "<group>"; };
 		CCE34A77275762F200952C88 /* FriendsVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
+		CCE64C4127BD0E5500BC3686 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +113,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AEBF0D85F40DC020F4EBE4 /* Pods_SocialNetworkAmelinRoman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C299758AB5746D41073A4BA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84BA5670786723719E3E159F /* Pods-SocialNetworkAmelinRoman.debug.xcconfig */,
+				AC1C6323F8D03696BC3A4318 /* Pods-SocialNetworkAmelinRoman.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C59B33B19CA04519519B2345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A6948DA5B3FE4EFCB1CF8FC /* Pods_SocialNetworkAmelinRoman.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC0F1AB4275F584800E35737 /* LoadingScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				CCA48721274264C5003F270B /* LoginViewController.swift */,
+				CCDF302827BA4CDF00E893B5 /* VKLoginVC.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -190,6 +218,8 @@
 			children = (
 				CCA4870A2742642A003F270B /* SocialNetworkAmelinRoman */,
 				CCA487092742642A003F270B /* Products */,
+				C299758AB5746D41073A4BA8 /* Pods */,
+				C59B33B19CA04519519B2345 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +234,7 @@
 		CCA4870A2742642A003F270B /* SocialNetworkAmelinRoman */ = {
 			isa = PBXGroup;
 			children = (
+				CCE64C4027BD0E3800BC3686 /* Service */,
 				CC86BEC02770D888006F3144 /* CustomNavigationController */,
 				CC18F6FE276DCAEF00DED829 /* CustomSegue */,
 				CCB7A688274CD1EA00C9BB8D /* CustomCell */,
@@ -299,6 +330,14 @@
 			path = FriendPhotoViewController;
 			sourceTree = "<group>";
 		};
+		CCE64C4027BD0E3800BC3686 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CCE64C4127BD0E5500BC3686 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCA4871C2742642B003F270B /* Build configuration list for PBXNativeTarget "SocialNetworkAmelinRoman" */;
 			buildPhases = (
+				661F7BAB573C9A363897DBFF /* [CP] Check Pods Manifest.lock */,
 				CCA487042742642A003F270B /* Sources */,
 				CCA487052742642A003F270B /* Frameworks */,
 				CCA487062742642A003F270B /* Resources */,
+				9F70F3027939355B5F07A046 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,6 +409,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		661F7BAB573C9A363897DBFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocialNetworkAmelinRoman-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F70F3027939355B5F07A046 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialNetworkAmelinRoman/Pods-SocialNetworkAmelinRoman-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialNetworkAmelinRoman/Pods-SocialNetworkAmelinRoman-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialNetworkAmelinRoman/Pods-SocialNetworkAmelinRoman-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCA487042742642A003F270B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -404,11 +487,13 @@
 				CC3D91092750F4060043E20E /* GalleryFriendViewController.swift in Sources */,
 				CC7BC0A02756291C00B9C926 /* FriendsTableViewCell.swift in Sources */,
 				CCBCE9D2274CF6460002CB18 /* MyGroupVC+FillData.swift in Sources */,
+				CCDF302927BA4CDF00E893B5 /* VKLoginVC.swift in Sources */,
 				CC0F1AB6275F588000E35737 /* LoadingScreenViewController.swift in Sources */,
 				CC86BEC92770D888006F3144 /* CustomNC+NavigationControllerDelagate.swift in Sources */,
 				CC86BEC72770D888006F3144 /* InterectiveTransition.swift in Sources */,
 				CC3D910D2750F5580043E20E /* GalleryFriendVC+CollectionViewDelegate.swift in Sources */,
 				CCBCE9D6274CFBEB0002CB18 /* AllGroupVC+TableViewDataSource.swift in Sources */,
+				CCE64C4227BD0E5500BC3686 /* NetworkService.swift in Sources */,
 				CC3D910B2750F53F0043E20E /* GalleryFriendVC+CollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +638,7 @@
 		};
 		CCA4871D2742642B003F270B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84BA5670786723719E3E159F /* Pods-SocialNetworkAmelinRoman.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -581,6 +667,7 @@
 		};
 		CCA4871E2742642B003F270B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC1C6323F8D03696BC3A4318 /* Pods-SocialNetworkAmelinRoman.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
