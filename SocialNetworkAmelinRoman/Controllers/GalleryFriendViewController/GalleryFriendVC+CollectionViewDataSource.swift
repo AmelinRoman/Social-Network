@@ -15,8 +15,8 @@ extension GalleryFriendViewController: UICollectionViewDataSource {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "GalleryFriendCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: galleryFriendCollectionIdentifier)
-        
         collectionView.backgroundColor = UIColor.systemIndigo
+        NetworkService().loadPhotoUsers()
         
     }
     // - Возвращаем кол-во секций

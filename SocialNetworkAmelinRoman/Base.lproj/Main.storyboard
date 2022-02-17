@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IRK-OM-Yok">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6SY-cQ-1mM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LoginVC-->
+        <scene sceneID="LOm-n5-DTr">
+            <objects>
+                <viewController id="6SY-cQ-1mM" customClass="VKLoginVC" customModule="SocialNetworkAmelinRoman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3qr-Ks-olq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRM-v0-fGR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WGE-c5-OR0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WGE-c5-OR0" firstAttribute="trailing" secondItem="CRM-v0-fGR" secondAttribute="trailing" id="Kxx-aN-6cC"/>
+                            <constraint firstItem="CRM-v0-fGR" firstAttribute="top" secondItem="WGE-c5-OR0" secondAttribute="top" id="lgw-41-gRq"/>
+                            <constraint firstItem="CRM-v0-fGR" firstAttribute="leading" secondItem="WGE-c5-OR0" secondAttribute="leading" id="nNp-dj-ePZ"/>
+                            <constraint firstItem="WGE-c5-OR0" firstAttribute="bottom" secondItem="CRM-v0-fGR" secondAttribute="bottom" id="zSW-Lk-671"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="CRM-v0-fGR" id="aJW-oH-YZj"/>
+                        <segue destination="IRK-OM-Yok" kind="presentation" identifier="GoToMySocialNetwork" modalPresentationStyle="fullScreen" id="DSu-nN-d8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbo-k8-cFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1714" y="53"/>
+        </scene>
         <!--Loading Screen View Controller-->
         <scene sceneID="5aY-OF-pHq">
             <objects>
@@ -70,6 +105,7 @@
                             <constraint firstItem="5cz-y4-VSt" firstAttribute="leading" secondItem="uBe-zt-Lcz" secondAttribute="trailing" constant="30" id="jVa-KD-tyC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zsf-0B-a73"/>
                     <connections>
                         <outlet property="oneView" destination="uBe-zt-Lcz" id="Fbf-Kx-1Kn"/>
                         <outlet property="threeView" destination="H2x-X8-4TB" id="I6G-OR-Ffk"/>
@@ -90,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVV-RT-Xw7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onD-9k-Bb6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
@@ -145,6 +181,14 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-SM-R8A">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Exit Vk Login"/>
+                                                <connections>
+                                                    <segue destination="N06-W7-yJZ" kind="unwind" unwindAction="unwindToVKLogin:" id="SJh-iJ-TF0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
@@ -157,6 +201,7 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rXO-4V-pmJ" secondAttribute="trailing" constant="20" symbolic="YES" id="Ipr-xt-9sX"/>
                                             <constraint firstItem="ntF-A5-b5X" firstAttribute="leading" secondItem="onD-9k-Bb6" secondAttribute="leading" constant="16" id="J09-UF-lWM"/>
                                             <constraint firstItem="WMw-oa-u6T" firstAttribute="top" secondItem="onD-9k-Bb6" secondAttribute="top" constant="16" id="JCX-6K-GVH"/>
+                                            <constraint firstItem="gnM-SM-R8A" firstAttribute="top" secondItem="onD-9k-Bb6" secondAttribute="top" id="Uzu-m5-fr5"/>
                                             <constraint firstItem="uDg-DB-mgw" firstAttribute="top" secondItem="6TI-a6-iZV" secondAttribute="bottom" constant="16" id="XUv-BH-XCW"/>
                                             <constraint firstAttribute="trailing" secondItem="uDg-DB-mgw" secondAttribute="trailing" constant="16" id="Yqq-Lc-pwL"/>
                                             <constraint firstItem="uDg-DB-mgw" firstAttribute="centerX" secondItem="onD-9k-Bb6" secondAttribute="centerX" id="cGl-RP-EIi"/>
@@ -165,6 +210,7 @@
                                             <constraint firstItem="g9l-56-FO5" firstAttribute="top" secondItem="WMw-oa-u6T" secondAttribute="bottom" constant="15" id="kMw-yX-Hov"/>
                                             <constraint firstAttribute="bottom" secondItem="W6i-7A-596" secondAttribute="bottom" constant="278" id="kOr-33-nJz"/>
                                             <constraint firstItem="uDg-DB-mgw" firstAttribute="leading" secondItem="onD-9k-Bb6" secondAttribute="leading" constant="16" id="l7q-Q3-PYc"/>
+                                            <constraint firstItem="gnM-SM-R8A" firstAttribute="leading" secondItem="onD-9k-Bb6" secondAttribute="leading" id="nWX-Nv-Rov"/>
                                             <constraint firstItem="ntF-A5-b5X" firstAttribute="top" secondItem="rXO-4V-pmJ" secondAttribute="bottom" constant="16" id="oVp-W1-sYM"/>
                                             <constraint firstAttribute="trailing" secondItem="g9l-56-FO5" secondAttribute="trailing" constant="10" id="s8x-bf-lf9"/>
                                             <constraint firstItem="WMw-oa-u6T" firstAttribute="centerX" secondItem="onD-9k-Bb6" secondAttribute="centerX" id="sva-zp-FKh"/>
@@ -194,7 +240,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVV-RT-Xw7" secondAttribute="trailing" id="yfS-4I-c8X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DXe-Fd-Xt4"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="loginTextField" destination="uDg-DB-mgw" id="D28-7s-fwz"/>
                         <outlet property="passwordTextField" destination="ntF-A5-b5X" id="Bpn-mF-Biu"/>
@@ -204,6 +251,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="N06-W7-yJZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="50.724637681159422" y="52.901785714285715"/>
         </scene>

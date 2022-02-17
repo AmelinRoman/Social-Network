@@ -30,6 +30,7 @@ class FriendsViewController: UIViewController {
         configureTableView()
         myFriendsFillData()
         configureSearchBar()
+        NetworkService().loadUserFriends()
         //loadHeaderName()
         
         

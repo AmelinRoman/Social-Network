@@ -89,8 +89,8 @@ class LoginViewController: UIViewController {
     // - Функция проверки логина и пароля
     private func isValid() -> Bool {
         
-        if loginTextField.text == "admin",
-           passwordTextField.text == "123" {
+        if loginTextField.text == "1",
+           passwordTextField.text == "1" {
             return true
         } else {
             return false
