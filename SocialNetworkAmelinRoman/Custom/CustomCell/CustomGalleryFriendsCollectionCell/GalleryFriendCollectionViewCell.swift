@@ -23,14 +23,12 @@ class GalleryFriendCollectionViewCell: UICollectionViewCell {
         avatarFriend.image = nil
     }
     // - Настройки ячейки
-    func configure(image: UIImage?) {
-        
-        avatarFriend.image = image
+    func configure(/*image: UIImage?,*/ model: Photo) {
+        guard let url = URL(string: model.photo) else { return }
+        avatarFriend.load(url: url)
         avatarFriend.layer.cornerRadius = 15
         customView.layer.backgroundColor = UIColor.black.cgColor
         customView.layer.cornerRadius = 20
-        
-        
     }
     
     func animateLikeLabel() {

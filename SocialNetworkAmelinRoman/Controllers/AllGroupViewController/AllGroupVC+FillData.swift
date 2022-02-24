@@ -11,7 +11,7 @@ extension AllGroupViewController {
     // - Функция заполнения и передачи данных в основной массив
     func allGroupFillData() {
         
-        let allGroup: [Group] = [
+       /* let allGroup: [Group] = [
             Group(nameGroup: "Aviasales", avatarGroupName: "1_1"),
             Group(nameGroup: "Brand Shop", avatarGroupName: "1_2"),
             Group(nameGroup: "Botanica", avatarGroupName: "1_3"),
@@ -33,7 +33,7 @@ extension AllGroupViewController {
         
         for i in allGroup {
             arrayAllGroupList.append(i)
-        }
+        }*/
         
       
         

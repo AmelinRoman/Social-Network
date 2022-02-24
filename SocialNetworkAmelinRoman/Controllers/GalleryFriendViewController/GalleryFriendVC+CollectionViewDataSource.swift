@@ -16,8 +16,7 @@ extension GalleryFriendViewController: UICollectionViewDataSource {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "GalleryFriendCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: galleryFriendCollectionIdentifier)
         collectionView.backgroundColor = UIColor.systemIndigo
-        NetworkService().loadPhotoUsers()
-        
+
     }
     // - Возвращаем кол-во секций
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -29,12 +28,12 @@ extension GalleryFriendViewController: UICollectionViewDataSource {
     // - Возвращаем кол-во ячеек
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return arrayGalleryFriend.count
+        return photoSizes.count
     }
     // - Передаем данные в ячейку 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryFriendCollectionIdentifier, for: indexPath) as! GalleryFriendCollectionViewCell
-        cell.configure(image: UIImage(named: arrayGalleryFriend[indexPath.item]))
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryFriendCollectionIdentifier, for: indexPath) as? GalleryFriendCollectionViewCell else { return UICollectionViewCell()}
+        cell.configure(model: photoSizes[indexPath.item])
         return cell
     }
     

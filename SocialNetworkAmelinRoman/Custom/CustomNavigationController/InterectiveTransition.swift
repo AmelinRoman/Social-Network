@@ -14,7 +14,6 @@ class InterectiveTransition: UIPercentDrivenInteractiveTransition {
             let recognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(onPan(_:)))
             recognizer.edges = [.left]
             viewController?.view.addGestureRecognizer(recognizer)
-            
         }
     }
     

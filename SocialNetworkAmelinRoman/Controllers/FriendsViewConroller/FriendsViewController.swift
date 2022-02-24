@@ -18,7 +18,17 @@ class FriendsViewController: UIViewController {
     // - Массив данных
     var arrayFriendsList = [Friends]()
     // - Массив для searchBar
-    var searchFriendResult = [Friends]()
+    var searchFriendResult = [FriendsItems]()
+    
+    private var networkService = NetworkService()
+    var friendsItem = [FriendsItems]() {
+        // - наблюдатель , при взаимодействии обновляет tableView  и подгружает данные
+        didSet {
+            DispatchQueue.main.async {
+                self.configureSearchBar()
+            }
+        }
+    }
     
    // var friendLoader = FriendsLoaderService()
    // var headerName = [String]()
@@ -28,9 +38,15 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        myFriendsFillData()
-        configureSearchBar()
-        NetworkService().loadUserFriends()
+        // - Передача данных в переменную
+        networkService.loadUserFriends { [weak self] result in
+            switch result {
+            case .success(let friendsItem):
+                self?.friendsItem = friendsItem
+            case .failure(let error):
+                print(error)
+            }
+        }
         //loadHeaderName()
         
         

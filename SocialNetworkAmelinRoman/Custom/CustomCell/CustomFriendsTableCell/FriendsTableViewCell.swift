@@ -84,4 +84,12 @@ class FriendsTableViewCell: UITableViewCell {
         
     }
     
+    func configure(model: FriendsItems) {
+        let name = model.firstName + " " + model.lastName
+        self.nameLabel.text = name
+        guard let url = URL(string: model.photo) else {return}
+        self.avatarImage.load(url: url)
+        configureTealView()
+    }
+    
 }

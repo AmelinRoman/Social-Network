@@ -8,5 +8,5 @@
 struct Friends {
     var nameFriend: String
     var avatarName: String?
-    var arrayAvatar: [String]?
+    var arrayAvatar: [String]
 }
