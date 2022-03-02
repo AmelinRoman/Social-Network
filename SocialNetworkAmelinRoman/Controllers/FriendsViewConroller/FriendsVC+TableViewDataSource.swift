@@ -45,7 +45,7 @@ extension FriendsViewController: UITableViewDataSource {
         // - Вызываем Cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: friendsIdentifier, for: indexPath) as? FriendsTableViewCell else {return UITableViewCell()}
         // - Передаем данные
-        cell.configure(friends: searchFriendResult[indexPath.row])
+        cell.configure(model: searchFriendResult[indexPath.row])
         // - Возвращаем данные
         return cell
     }

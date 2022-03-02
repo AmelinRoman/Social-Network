@@ -31,7 +31,7 @@ extension FriendsViewController {
         ]
         
         
-        for i in friendsList {
+       for i in friendsList {
             arrayFriendsList.append(i)
         }
         

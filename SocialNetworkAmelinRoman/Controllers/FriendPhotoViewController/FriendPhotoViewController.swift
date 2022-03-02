@@ -15,19 +15,20 @@ class FriendPhotoViewController: UIViewController {
     
     //private var pageView = UIPageControl()
     //private var interactiveAnimator: UIViewPropertyAnimator!
-    private var backPhotoFriend = UIImageView()
     var currentImage = 0
-    private var leftSwipe: Bool = false
-    private var rightSwipe: Bool = false
     var namePhotoFriend: String = ""
-    var arrayPhoto = [String]()
+    var arrayPhoto = [Photo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureFillData()
-        /*let recognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
-        self.view.addGestureRecognizer(recognizer)*/
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(onPan(_:)))
+        
+        let recognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
+        view.addGestureRecognizer(recognizer)
+        let url = arrayPhoto[currentImage].photo
+        guard let urlPhoto = URL(string: url) else {return}
+        photoFriend.load(url: urlPhoto)
+       /* let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(onPan(_:)))
         photoFriend.isUserInteractionEnabled = true
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         photoFriend.addGestureRecognizer(swipeRight)
@@ -35,156 +36,54 @@ class FriendPhotoViewController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(onPan(_:)))
         photoFriend.isUserInteractionEnabled = true
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        photoFriend.addGestureRecognizer(swipeLeft)
-        // Do any additional setup after loading the view.
+        photoFriend.addGestureRecognizer(swipeLeft)*/
+        
     }
     
-    /*private func leftSwipe(isLeft: Bool) {
-        
-        self.photoFriend.transform = .identity
-        self.backPhotoFriend.transform = .identity
-        self.photoFriend.image = UIImage(named: arrayPhoto[currentImage])
-        
-        if isLeft {
-            
-            self.backPhotoFriend.image = UIImage(named: arrayPhoto[currentImage + 1])
-            self.backPhotoFriend.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width, y: 0)
-        }
-        else {
-            
-            self.backPhotoFriend.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
-            self.backPhotoFriend.image = UIImage(named: arrayPhoto[currentImage - 1])
-        }
-    }
+    var interactiveAnimator: UIViewPropertyAnimator!
     
-    private func onLeftSwipe(isLeft: Bool) {
-        
-        self.photoFriend.transform = .identity
-        self.backPhotoFriend.transform = .identity
-        
-        if isLeft {
-            self.currentImage += 1
-        }
-        else {
-            self.currentImage -= 1
-        }
-        self.photoFriend.image = UIImage(named: self.arrayPhoto[self.currentImage])
-        self.photoFriend.bringSubviewToFront(self.photoFriend)
-        self.pageView.currentPage = self.currentImage
-    }*/
-    
-    
-    
- @objc func onPan(_ recognizer: UIGestureRecognizer) {
-        
-     
-     /*if let animator = interactiveAnimator,
-     animator.isRunning {
-         return
-     }
+ @objc func onPan(_ recognizer: UIPanGestureRecognizer) {
      
      switch recognizer.state {
      case .began:
-         self.photoFriend.transform = .identity
-         self.photoFriend.image = UIImage(named: arrayPhoto[currentImage])
-         self.backPhotoFriend.transform = .identity
-         self.photoFriend.bringSubviewToFront(photoFriend)
-         
-         interactiveAnimator.startAnimation()
-         interactiveAnimator = UIViewPropertyAnimator(duration: 0.5,
-                                                      curve: .easeInOut,
-                                                      animations: { [weak self] in
-             self?.photoFriend.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
-         })
+         interactiveAnimator?.startAnimation()
+         interactiveAnimator = UIViewPropertyAnimator(
+            duration: 0.5,
+            curve: .easeInOut,
+            animations: {
+                self.photoFriend.alpha = 0.5
+                self.photoFriend.transform = .init(scaleX: 1.5, y: 1.5)
+            })
          interactiveAnimator.pauseAnimation()
-         leftSwipe = false
-         rightSwipe = false
      case .changed:
-         var translation = recognizer.translation(in: self.view)
-         
-         if translation.x < 0 && (!leftSwipe) {
-             if self.currentImage == (arrayPhoto.count - 1) {
-                 interactiveAnimator.stopAnimation(true)
-                 return
-             }
-             leftSwipe(isLeft: true)
-             
-             interactiveAnimator.stopAnimation(true)
-             interactiveAnimator.addAnimations { [weak self] in
-                 self?.photoFriend.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
-                 self?.backPhotoFriend.transform = .identity
-             }
-             interactiveAnimator.addCompletion({ [weak self] _ in
-                 self?.onLeftSwipe(isLeft: true)
-             })
-             
-             interactiveAnimator.startAnimation()
-             interactiveAnimator.pauseAnimation()
-             leftSwipe = true
-         }
-         
-         if translation.x > 0 && (!rightSwipe) {
-             if self.currentImage == 0 {
-                 interactiveAnimator.stopAnimation(true)
-                 return
-             }
-             leftSwipe(isLeft: false)
-             interactiveAnimator.stopAnimation(true)
-             interactiveAnimator.addAnimations { [weak self] in
-                 self?.photoFriend.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width, y: 0)
-                 self?.backPhotoFriend.transform = .identity
-             }
-             interactiveAnimator.addCompletion({ [weak self] _ in
-                 self?.onLeftSwipe(isLeft: false)
-             })
-             interactiveAnimator.startAnimation()
-             interactiveAnimator.pauseAnimation()
-             rightSwipe = true
-         }
-         
-         if rightSwipe && (translation.x < 0) {return}
-         if leftSwipe && (translation.x > 0) {return}
-         
-         if translation.x < 0 {
-             translation.x = -translation.x
-         }
-         interactiveAnimator.fractionComplete = translation.x / (UIScreen.main.bounds.width)
+         let translition = recognizer.translation(in: self.view)
+         interactiveAnimator.fractionComplete = abs(translition.x / 100)
+         self.photoFriend.transform = CGAffineTransform(translationX: translition.x, y: 0)
          
      case .ended:
-         if let animator = interactiveAnimator,
-         animator.isRunning {
-             return
-         }
-         var translation = recognizer.translation(in: self.view)
-         
-         if translation.x < 0 {translation.x = -translation.x}
-         if (translation.x / (UIScreen.main.bounds.width)) > 0.5 {
-             interactiveAnimator.startAnimation()
-         }
-         else {
-             interactiveAnimator.stopAnimation(true)
-             interactiveAnimator.finishAnimation(at: .start)
-             interactiveAnimator.addAnimations { [weak self] in
-                 guard let self = self else {return}
-                 self.photoFriend.transform = .identity
-                 if self.leftSwipe {
-                     self.backPhotoFriend.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width, y: 0)
-                 }
-                 if self.rightSwipe {
-                     self.backPhotoFriend.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
-                 }
+         interactiveAnimator.stopAnimation(true)
+         if recognizer.translation(in: self.view).x < 0 {
+             if currentImage < arrayPhoto.count - 1 {
+                 self.currentImage += 1
              }
-             interactiveAnimator.addCompletion({ [weak self] _ in
-                 self?.photoFriend.transform = .identity
-                 self?.backPhotoFriend.transform = .identity
-             })
-             
-             interactiveAnimator.startAnimation()
+         } else {
+             if currentImage != 0 {
+                 self.currentImage -= 1
+             }
          }
+         interactiveAnimator.addAnimations {
+             self.photoFriend.transform = .identity
+             self.photoFriend.alpha = 1
+         }
+         interactiveAnimator?.startAnimation()
          
-     default: return
-     }*/
-     if let swipeGesture = recognizer as? UISwipeGestureRecognizer {
+     default: break
+     }
+     guard let url = URL(string: arrayPhoto[currentImage].photo) else { return }
+     photoFriend.load(url: url)
+     
+    
+    /* if let swipeGesture = recognizer as? UISwipeGestureRecognizer {
          // let translation = recognizer.translation(recognizer.view)
          switch swipeGesture.direction {
          case UISwipeGestureRecognizer.Direction.left:
@@ -198,6 +97,7 @@ class FriendPhotoViewController: UIViewController {
                  currentImage += 1
                  
              }
+             photoFriend.load(url: URL(string: arrayPhoto[currentImage].photo))
              photoFriend.image = UIImage(named: arrayPhoto[currentImage])
              backPhotoFriend.image = UIImage(named: arrayPhoto[currentImage])
              
@@ -224,7 +124,7 @@ class FriendPhotoViewController: UIViewController {
          default: break
          }
      }
-     
+   */
  }
     
 

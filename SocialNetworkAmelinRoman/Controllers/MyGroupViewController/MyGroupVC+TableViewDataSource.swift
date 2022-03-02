@@ -15,7 +15,6 @@ extension MyGroupViewController: UITableViewDataSource {
         tableView.delegate = self
         // - Регистрируем xib
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: myGroupIdentifier)
-        NetworkService().loadUsersGroups()
         
     }
     // - Функция возвращение количество секций
@@ -25,7 +24,7 @@ extension MyGroupViewController: UITableViewDataSource {
     // - Функция кол-ва ячеек равной кол-ву элементов в массиве
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        arrayGroup.count
+        groupsItem.count
         
     }
     // - Передача данных в ячейку
@@ -33,7 +32,8 @@ extension MyGroupViewController: UITableViewDataSource {
         // - Вызываем Cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: myGroupIdentifier, for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
         // - Передаем данные
-        cell.configure(group: arrayGroup[indexPath.row])
+        cell.configure(model: groupsItem[indexPath.row])
+        //cell.configure(group: arrayGroup[indexPath.row])
         // - Возвращаем данные
         return cell
     }

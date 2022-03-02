@@ -17,17 +17,17 @@ extension FriendsViewController: UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == friendToGallerySegue,
-           let friendFotoArray = sender as? [String],
+           let friendFotoArray = sender as? Int,
            let destination = segue.destination as? GalleryFriendViewController {
-            destination.arrayGalleryFriend = friendFotoArray
+            destination.ownerPhotoID = friendFotoArray
         }
     }
      // - Обработка нажатия, передача данных и переход на следующий Controller 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let friendFotoArray = searchFriendResult[indexPath.item].arrayAvatar {
+        if let friendFotoArray = searchFriendResult[indexPath.item].id {
             performSegue(withIdentifier: friendToGallerySegue, sender: friendFotoArray)
         }
-    }
 }
 
 
+}

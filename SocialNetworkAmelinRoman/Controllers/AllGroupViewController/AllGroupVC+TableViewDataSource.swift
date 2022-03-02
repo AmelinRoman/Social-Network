@@ -34,7 +34,7 @@ extension AllGroupViewController: UITableViewDataSource {
         // - Вызываем Cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: allGroupIdentifier, for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
         // - Передаем данные
-        cell.configure(group: arrayAllGroupList[indexPath.row])
+        cell.configure(model: arrayAllGroupList[indexPath.item])
         // - Возвращаем данные
         return cell
     }

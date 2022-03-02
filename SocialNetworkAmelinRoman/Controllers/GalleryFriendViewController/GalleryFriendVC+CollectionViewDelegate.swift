@@ -17,16 +17,14 @@ extension GalleryFriendViewController: UICollectionViewDelegate {
            //let arrayFriendPhoto = sender as? [String],
            let destination = segue.destination as? FriendPhotoViewController {
             destination.namePhotoFriend = friendPhoto
-            destination.arrayPhoto = arrayGalleryFriend
+            destination.arrayPhoto = photoSizes
         }
     }
    // - Обработка нажатия, передача данных и переход на следующий Controller
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let friendPhoto = arrayGalleryFriend[indexPath.item]
-        if friendPhoto != nil {
-            performSegue(withIdentifier: toPhotoSegue, sender: friendPhoto)
-        }
+        let friendPhoto = photoSizes[indexPath.item].photo
+        performSegue(withIdentifier: toPhotoSegue, sender: friendPhoto)
         
     }
    
