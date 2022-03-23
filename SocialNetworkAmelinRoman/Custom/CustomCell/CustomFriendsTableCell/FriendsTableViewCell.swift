@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FriendsTableViewCell: UITableViewCell {
 
@@ -87,9 +88,20 @@ class FriendsTableViewCell: UITableViewCell {
     func configure(model: FriendsItems) {
         let name = model.firstName + " " + model.lastName
         self.nameLabel.text = name
+        
         guard let url = URL(string: model.photo) else {return}
-        self.avatarImage.load(url: url)
+        let imageUrl = ImageResource(downloadURL: url)
+        //self.avatarImage.load(url: url)
+        self.avatarImage.kf.setImage(with: imageUrl)
         configureTealView()
+    }
+    
+    func configure(model: RealmFriends) {
+        configureTealView()
+        self.nameLabel.text = model.fullName
+        guard let url = URL(string: model.photo) else {return}
+        let imageUrl = ImageResource(downloadURL: url)
+        self.avatarImage.kf.setImage(with: imageUrl)
     }
     
 }

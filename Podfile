@@ -6,7 +6,7 @@ target 'SocialNetworkAmelinRoman' do
   use_frameworks!
   pod 'RealmSwift', '~>10'
   pod 'Alamofire', '~> 5.5'
-
+  pod 'Kingfisher', '~> 7.0'
 
 end
 

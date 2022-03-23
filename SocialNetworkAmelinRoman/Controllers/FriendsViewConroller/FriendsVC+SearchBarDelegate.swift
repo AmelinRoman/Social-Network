@@ -6,35 +6,31 @@
 //
 
 import UIKit
-
-
-
+// - MARK: Extension FriendsViewController - UISeacrhBarDelegate
 extension FriendsViewController: UISearchBarDelegate {
     
-   func configureSearchBar() {
-       
-       searchBar.delegate = self
-       
-       self.searchFriendResult = self.friendsItem
-       self.tableView.reloadData()
-   }
+    func configureSearchBar() {
+        
+        searchBar.delegate = self
+        
+        self.searchFriendResult = self.friendsArrayRealm
+        self.tableView.reloadData()
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         searchFriendResult = []
-        
         if searchText == "" {
-            searchFriendResult = friendsItem
+            searchFriendResult = self.friendsArrayRealm
         }
         else {
-        for i in friendsItem {
-            let name = i.lastName + " " + i.firstName
-            if name.lowercased().contains(searchText.lowercased()) {
-                
-                searchFriendResult.append(i)
-             }
-          }
-       }
+            for i in friendsArrayRealm {
+                let name = i.fullName
+                if name.lowercased().contains(searchText.lowercased()) {
+                    searchFriendResult.append(i)
+                }
+            }
+        }
         self.tableView.reloadData()
     }
 }

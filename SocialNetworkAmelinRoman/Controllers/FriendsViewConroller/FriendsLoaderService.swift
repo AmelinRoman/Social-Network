@@ -5,45 +5,14 @@
 //  Created by Macbook Pro on 17.12.2021.
 //
 
-/*import UIKit
+import UIKit
+import RealmSwift
 
-
-final class FriendsLoaderService: FriendsViewController {
+extension FriendsViewController {
     
-    func loaderFriend() -> [SectionFriends] {
-        
-        let sortedArray = friendArray(arrayFriendsList)
-        let sectionArray = sectionForFriends(sortedArray)
-        return sectionArray
+    func loadFriend(realm: Results<RealmFriends>?) -> [RealmFriends] {
+        guard let realm = realm else {return friendsArrayRealm}
+        friendsArrayRealm = Array(realm)
+        return friendsArrayRealm
     }
 }
-
-private extension FriendsLoaderService {
-    
-    func friendArray(_ array: [Friends]) -> [Character: [Friends]] {
-        var newArray: [Character: [Friends]] = [:]
-        for user in array {
-            guard let firstLetter = user.nameFriend.first else {
-                continue
-            }
-            guard var array = newArray[firstLetter] else {
-                let newValue = [user]
-                newArray.updateValue(newValue, forKey: firstLetter)
-                continue
-            }
-            array.append(user)
-            newArray.updateValue(array, forKey: firstLetter)
-        }
-        return newArray
-    }
-    
-    func sectionForFriends(_ array: [Character: [Friends]]) -> [SectionFriends] {
-        
-        var sections: [SectionFriends] = []
-        for (key, array) in array {
-            sections.append(SectionFriends(key: key, data: array))
-        }
-        sections.sort {$0 < $1}
-        return sections
-    }
-}*/

@@ -6,28 +6,28 @@
 //
 
 import UIKit
-// - MARK: Класс вывода фотографии на отдельный экран
+import RealmSwift
+import Kingfisher
+// - MARK: FriendPhotoViewController
 class FriendPhotoViewController: UIViewController {
 
 
     @IBOutlet weak var viewPhoto: UIView!
     @IBOutlet weak var photoFriend: UIImageView!
-    
-    //private var pageView = UIPageControl()
-    //private var interactiveAnimator: UIViewPropertyAnimator!
     var currentImage = 0
     var namePhotoFriend: String = ""
-    var arrayPhoto = [Photo]()
-    
+    var arrayPhoto: Results<RealmPhoto>?
+    var realmPhoto = [RealmPhoto]()
+    var interactiveAnimator: UIViewPropertyAnimator!
+// - MARK: FriendPhoto - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         configureFillData()
-        
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
         view.addGestureRecognizer(recognizer)
-        let url = arrayPhoto[currentImage].photo
+        guard let url = arrayPhoto?[currentImage].url else {return}
         guard let urlPhoto = URL(string: url) else {return}
-        photoFriend.load(url: urlPhoto)
+        photoFriend.kf.setImage(with: urlPhoto)
        /* let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(onPan(_:)))
         photoFriend.isUserInteractionEnabled = true
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
@@ -40,10 +40,9 @@ class FriendPhotoViewController: UIViewController {
         
     }
     
-    var interactiveAnimator: UIViewPropertyAnimator!
-    
  @objc func onPan(_ recognizer: UIPanGestureRecognizer) {
      
+     guard let arrayPhoto = arrayPhoto else {return}
      switch recognizer.state {
      case .began:
          interactiveAnimator?.startAnimation()
@@ -63,7 +62,9 @@ class FriendPhotoViewController: UIViewController {
      case .ended:
          interactiveAnimator.stopAnimation(true)
          if recognizer.translation(in: self.view).x < 0 {
-             if currentImage < arrayPhoto.count - 1 {
+            
+
+             if currentImage < arrayPhoto.count - 1  {
                  self.currentImage += 1
              }
          } else {
@@ -78,9 +79,10 @@ class FriendPhotoViewController: UIViewController {
          interactiveAnimator?.startAnimation()
          
      default: break
-     }
-     guard let url = URL(string: arrayPhoto[currentImage].photo) else { return }
-     photoFriend.load(url: url)
+
+     
+
+        
      
     
     /* if let swipeGesture = recognizer as? UISwipeGestureRecognizer {
@@ -126,6 +128,8 @@ class FriendPhotoViewController: UIViewController {
      }
    */
  }
-    
+     guard let url = URL(string: arrayPhoto[currentImage].url) else {return}
+     photoFriend.kf.setImage(with: url)
 
+}
 }

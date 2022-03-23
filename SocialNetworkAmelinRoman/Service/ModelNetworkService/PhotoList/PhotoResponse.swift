@@ -7,7 +7,8 @@
 
 import Foundation
 
-// - MARK: Модель JSON photos.get
+// - MARK: PhotoResponse
+// - Model JSON
 struct PhotoResponse {
     var response: CountResponse
 }

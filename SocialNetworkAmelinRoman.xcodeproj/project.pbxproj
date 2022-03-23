@@ -12,6 +12,11 @@
 		CC18F6F9276C789800DED829 /* SectionFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18F6F8276C789800DED829 /* SectionFriends.swift */; };
 		CC18F6FB276C7A9000DED829 /* FriendsLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18F6FA276C7A9000DED829 /* FriendsLoaderService.swift */; };
 		CC18F6FD276C8EEC00DED829 /* FriendPhotoVC+SwipeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18F6FC276C8EEC00DED829 /* FriendPhotoVC+SwipeRecognizer.swift */; };
+		CC284AB927D60E9600F1F343 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC284AB827D60E9600F1F343 /* RealmService.swift */; };
+		CC284AC027D63B7C00F1F343 /* RealmFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC284ABF27D63B7C00F1F343 /* RealmFriends.swift */; };
+		CC284AC227D8C27B00F1F343 /* RealmGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC284AC127D8C27B00F1F343 /* RealmGroups.swift */; };
+		CC284AC427D8C3D700F1F343 /* RealmSearhGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC284AC327D8C3D700F1F343 /* RealmSearhGroups.swift */; };
+		CC284AC627D8C4B800F1F343 /* RealmPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC284AC527D8C4B800F1F343 /* RealmPhoto.swift */; };
 		CC3D91052750F3BE0043E20E /* GalleryFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D91032750F3BE0043E20E /* GalleryFriendCollectionViewCell.swift */; };
 		CC3D91062750F3BE0043E20E /* GalleryFriendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3D91042750F3BE0043E20E /* GalleryFriendCollectionViewCell.xib */; };
 		CC3D91092750F4060043E20E /* GalleryFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D91082750F4060043E20E /* GalleryFriendViewController.swift */; };
@@ -34,18 +39,15 @@
 		CCB7A683274CD11A00C9BB8D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7A682274CD11A00C9BB8D /* Group.swift */; };
 		CCB7A686274CD1DD00C9BB8D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7A684274CD1DD00C9BB8D /* CustomTableViewCell.swift */; };
 		CCB7A687274CD1DD00C9BB8D /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB7A685274CD1DD00C9BB8D /* CustomTableViewCell.xib */; };
-		CCBCE9CC274CF5580002CB18 /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9CB274CF5580002CB18 /* MyGroupViewController.swift */; };
-		CCBCE9CE274CF61E0002CB18 /* MyGroupVC+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9CD274CF61E0002CB18 /* MyGroupVC+TableViewDataSource.swift */; };
-		CCBCE9D0274CF6330002CB18 /* MyGroupVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9CF274CF6330002CB18 /* MyGroupVC+TableViewDelegate.swift */; };
-		CCBCE9D2274CF6460002CB18 /* MyGroupVC+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9D1274CF6460002CB18 /* MyGroupVC+FillData.swift */; };
+		CCBCE9CC274CF5580002CB18 /* UserGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9CB274CF5580002CB18 /* UserGroupViewController.swift */; };
+		CCBCE9CE274CF61E0002CB18 /* UserGroupVC+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9CD274CF61E0002CB18 /* UserGroupVC+TableViewDataSource.swift */; };
+		CCBCE9D0274CF6330002CB18 /* UserGroupVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9CF274CF6330002CB18 /* UserGroupVC+TableViewDelegate.swift */; };
 		CCBCE9D4274CFB5E0002CB18 /* AllGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9D3274CFB5E0002CB18 /* AllGroupViewController.swift */; };
 		CCBCE9D6274CFBEB0002CB18 /* AllGroupVC+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9D5274CFBEB0002CB18 /* AllGroupVC+TableViewDataSource.swift */; };
 		CCBCE9D8274CFBFF0002CB18 /* AllGroupVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9D7274CFBFF0002CB18 /* AllGroupVC+TableViewDelegate.swift */; };
-		CCBCE9DA274CFC190002CB18 /* AllGroupVC+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9D9274CFC190002CB18 /* AllGroupVC+FillData.swift */; };
 		CCBCE9DC274D05AD0002CB18 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9DB274D05AD0002CB18 /* FriendsViewController.swift */; };
 		CCBCE9DE274D05E00002CB18 /* FriendsVC+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9DD274D05E00002CB18 /* FriendsVC+TableViewDataSource.swift */; };
 		CCBCE9E0274D06340002CB18 /* FriendsVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9DF274D06340002CB18 /* FriendsVC+TableViewDelegate.swift */; };
-		CCBCE9E2274D06460002CB18 /* FriendsVC+FillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCE9E1274D06460002CB18 /* FriendsVC+FillData.swift */; };
 		CCD2E36B276DCBE100C5ECB7 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E36A276DCBE100C5ECB7 /* CustomSegue.swift */; };
 		CCD6C9FF27C0D7DC00D90109 /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6C9FE27C0D7DC00D90109 /* FriendsResponse.swift */; };
 		CCD6CA0227C0D8DE00D90109 /* FriendsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6CA0127C0D8DE00D90109 /* FriendsCount.swift */; };
@@ -79,6 +81,11 @@
 		CC18F6F8276C789800DED829 /* SectionFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFriends.swift; sourceTree = "<group>"; };
 		CC18F6FA276C7A9000DED829 /* FriendsLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsLoaderService.swift; sourceTree = "<group>"; };
 		CC18F6FC276C8EEC00DED829 /* FriendPhotoVC+SwipeRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendPhotoVC+SwipeRecognizer.swift"; sourceTree = "<group>"; };
+		CC284AB827D60E9600F1F343 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		CC284ABF27D63B7C00F1F343 /* RealmFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFriends.swift; sourceTree = "<group>"; };
+		CC284AC127D8C27B00F1F343 /* RealmGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmGroups.swift; sourceTree = "<group>"; };
+		CC284AC327D8C3D700F1F343 /* RealmSearhGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSearhGroups.swift; sourceTree = "<group>"; };
+		CC284AC527D8C4B800F1F343 /* RealmPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPhoto.swift; sourceTree = "<group>"; };
 		CC3D91032750F3BE0043E20E /* GalleryFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC3D91042750F3BE0043E20E /* GalleryFriendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryFriendCollectionViewCell.xib; sourceTree = "<group>"; };
 		CC3D91082750F4060043E20E /* GalleryFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryFriendViewController.swift; sourceTree = "<group>"; };
@@ -103,18 +110,15 @@
 		CCB7A682274CD11A00C9BB8D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		CCB7A684274CD1DD00C9BB8D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CCB7A685274CD1DD00C9BB8D /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		CCBCE9CB274CF5580002CB18 /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
-		CCBCE9CD274CF61E0002CB18 /* MyGroupVC+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyGroupVC+TableViewDataSource.swift"; sourceTree = "<group>"; };
-		CCBCE9CF274CF6330002CB18 /* MyGroupVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyGroupVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		CCBCE9D1274CF6460002CB18 /* MyGroupVC+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyGroupVC+FillData.swift"; sourceTree = "<group>"; };
+		CCBCE9CB274CF5580002CB18 /* UserGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupViewController.swift; sourceTree = "<group>"; };
+		CCBCE9CD274CF61E0002CB18 /* UserGroupVC+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		CCBCE9CF274CF6330002CB18 /* UserGroupVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		CCBCE9D3274CFB5E0002CB18 /* AllGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupViewController.swift; sourceTree = "<group>"; };
 		CCBCE9D5274CFBEB0002CB18 /* AllGroupVC+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupVC+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		CCBCE9D7274CFBFF0002CB18 /* AllGroupVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		CCBCE9D9274CFC190002CB18 /* AllGroupVC+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupVC+FillData.swift"; sourceTree = "<group>"; };
 		CCBCE9DB274D05AD0002CB18 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		CCBCE9DD274D05E00002CB18 /* FriendsVC+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		CCBCE9DF274D06340002CB18 /* FriendsVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		CCBCE9E1274D06460002CB18 /* FriendsVC+FillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+FillData.swift"; sourceTree = "<group>"; };
 		CCD2E36A276DCBE100C5ECB7 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		CCD6C9FE27C0D7DC00D90109 /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
 		CCD6CA0127C0D8DE00D90109 /* FriendsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCount.swift; sourceTree = "<group>"; };
@@ -183,6 +187,49 @@
 				CCD2E36A276DCBE100C5ECB7 /* CustomSegue.swift */,
 			);
 			path = CustomSegue;
+			sourceTree = "<group>";
+		};
+		CC284ABA27D63AF600F1F343 /* ModelRealmSevice */ = {
+			isa = PBXGroup;
+			children = (
+				CC284ABD27D63B3A00F1F343 /* RealmSearhGroups */,
+				CC284ABE27D63B5A00F1F343 /* RealmPhoto */,
+				CC284ABC27D63B3000F1F343 /* RealmGroups */,
+				CC284ABB27D63B1E00F1F343 /* RealmFriends */,
+			);
+			path = ModelRealmSevice;
+			sourceTree = "<group>";
+		};
+		CC284ABB27D63B1E00F1F343 /* RealmFriends */ = {
+			isa = PBXGroup;
+			children = (
+				CC284ABF27D63B7C00F1F343 /* RealmFriends.swift */,
+			);
+			path = RealmFriends;
+			sourceTree = "<group>";
+		};
+		CC284ABC27D63B3000F1F343 /* RealmGroups */ = {
+			isa = PBXGroup;
+			children = (
+				CC284AC127D8C27B00F1F343 /* RealmGroups.swift */,
+			);
+			path = RealmGroups;
+			sourceTree = "<group>";
+		};
+		CC284ABD27D63B3A00F1F343 /* RealmSearhGroups */ = {
+			isa = PBXGroup;
+			children = (
+				CC284AC327D8C3D700F1F343 /* RealmSearhGroups.swift */,
+			);
+			path = RealmSearhGroups;
+			sourceTree = "<group>";
+		};
+		CC284ABE27D63B5A00F1F343 /* RealmPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				CC284AC527D8C4B800F1F343 /* RealmPhoto.swift */,
+			);
+			path = RealmPhoto;
 			sourceTree = "<group>";
 		};
 		CC3D91012750F3130043E20E /* CustomGroupTableViewCell */ = {
@@ -287,7 +334,7 @@
 				CCB7A67D274CD09600C9BB8D /* FriendsViewConroller */,
 				CC3D91072750F3CA0043E20E /* GalleryFriendViewController */,
 				CCB7A67F274CD0EB00C9BB8D /* AllGroupViewController */,
-				CCB7A67E274CD0C500C9BB8D /* MyGroupViewController */,
+				CCB7A67E274CD0C500C9BB8D /* UserGroupViewController */,
 				CC92E3BF2746B108004AB84B /* LoginView */,
 			);
 			path = Controllers;
@@ -310,22 +357,20 @@
 				CCE34A77275762F200952C88 /* FriendsVC+SearchBarDelegate.swift */,
 				CCBCE9DD274D05E00002CB18 /* FriendsVC+TableViewDataSource.swift */,
 				CCBCE9DF274D06340002CB18 /* FriendsVC+TableViewDelegate.swift */,
-				CCBCE9E1274D06460002CB18 /* FriendsVC+FillData.swift */,
 				CC18F6F8276C789800DED829 /* SectionFriends.swift */,
 				CC18F6FA276C7A9000DED829 /* FriendsLoaderService.swift */,
 			);
 			path = FriendsViewConroller;
 			sourceTree = "<group>";
 		};
-		CCB7A67E274CD0C500C9BB8D /* MyGroupViewController */ = {
+		CCB7A67E274CD0C500C9BB8D /* UserGroupViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CCBCE9CB274CF5580002CB18 /* MyGroupViewController.swift */,
-				CCBCE9CD274CF61E0002CB18 /* MyGroupVC+TableViewDataSource.swift */,
-				CCBCE9CF274CF6330002CB18 /* MyGroupVC+TableViewDelegate.swift */,
-				CCBCE9D1274CF6460002CB18 /* MyGroupVC+FillData.swift */,
+				CCBCE9CB274CF5580002CB18 /* UserGroupViewController.swift */,
+				CCBCE9CD274CF61E0002CB18 /* UserGroupVC+TableViewDataSource.swift */,
+				CCBCE9CF274CF6330002CB18 /* UserGroupVC+TableViewDelegate.swift */,
 			);
-			path = MyGroupViewController;
+			path = UserGroupViewController;
 			sourceTree = "<group>";
 		};
 		CCB7A67F274CD0EB00C9BB8D /* AllGroupViewController */ = {
@@ -335,7 +380,6 @@
 				CCD6CA2427C617F100D90109 /* AllGroupVC+SearchBarDelegate.swift */,
 				CCBCE9D5274CFBEB0002CB18 /* AllGroupVC+TableViewDataSource.swift */,
 				CCBCE9D7274CFBFF0002CB18 /* AllGroupVC+TableViewDelegate.swift */,
-				CCBCE9D9274CFC190002CB18 /* AllGroupVC+FillData.swift */,
 			);
 			path = AllGroupViewController;
 			sourceTree = "<group>";
@@ -353,7 +397,6 @@
 		CCD6C9FD27C0D7C500D90109 /* ModelNetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				CCD6CA1C27C4E6EE00D90109 /* SearchGroupsList */,
 				CCD6CA0F27C3E00800D90109 /* PhotoList */,
 				CCD6CA0727C2368200D90109 /* GroupList */,
 				CCD6CA0027C0D8B000D90109 /* FriendsList */,
@@ -374,6 +417,7 @@
 		CCD6CA0727C2368200D90109 /* GroupList */ = {
 			isa = PBXGroup;
 			children = (
+				CCD6CA1C27C4E6EE00D90109 /* SearchGroupsList */,
 				CCD6CA0527C2367800D90109 /* GroupsResponse.swift */,
 				CCD6CA0827C2378900D90109 /* GroupsCount.swift */,
 				CCD6CA0A27C2379C00D90109 /* GroupsItem.swift */,
@@ -434,8 +478,10 @@
 		CCE64C4027BD0E3800BC3686 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CC284ABA27D63AF600F1F343 /* ModelRealmSevice */,
 				CCD6C9FD27C0D7C500D90109 /* ModelNetworkService */,
 				CCE64C4127BD0E5500BC3686 /* NetworkService.swift */,
+				CC284AB827D60E9600F1F343 /* RealmService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -559,7 +605,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB7A686274CD1DD00C9BB8D /* CustomTableViewCell.swift in Sources */,
-				CCBCE9E2274D06460002CB18 /* FriendsVC+FillData.swift in Sources */,
 				CCBCE9DC274D05AD0002CB18 /* FriendsViewController.swift in Sources */,
 				CCE34A5E27520ED60054FFDF /* FriendPhotoViewController.swift in Sources */,
 				CCA48722274264C5003F270B /* LoginViewController.swift in Sources */,
@@ -569,18 +614,20 @@
 				CCD6CA2027C4E73800D90109 /* SearchCountResponse.swift in Sources */,
 				CCE34A69275216FE0054FFDF /* FriendPhotoVC+FillData.swift in Sources */,
 				CCBCE9D8274CFBFF0002CB18 /* AllGroupVC+TableViewDelegate.swift in Sources */,
+				CC284AC227D8C27B00F1F343 /* RealmGroups.swift in Sources */,
 				CC3D91052750F3BE0043E20E /* GalleryFriendCollectionViewCell.swift in Sources */,
 				CCD6CA1727C3E11100D90109 /* PhotoSizes.swift in Sources */,
 				CCE34A78275762F200952C88 /* FriendsVC+SearchBarDelegate.swift in Sources */,
 				CC86BEC82770D888006F3144 /* CustomPushAnimate.swift in Sources */,
-				CCBCE9D0274CF6330002CB18 /* MyGroupVC+TableViewDelegate.swift in Sources */,
+				CCBCE9D0274CF6330002CB18 /* UserGroupVC+TableViewDelegate.swift in Sources */,
 				CCD6CA1327C3E02E00D90109 /* PhotoCount.swift in Sources */,
 				CC86BECA2770D888006F3144 /* CustomNavigationController.swift in Sources */,
 				CCD6CA0627C2367800D90109 /* GroupsResponse.swift in Sources */,
-				CCBCE9CC274CF5580002CB18 /* MyGroupViewController.swift in Sources */,
-				CCBCE9CE274CF61E0002CB18 /* MyGroupVC+TableViewDataSource.swift in Sources */,
+				CCBCE9CC274CF5580002CB18 /* UserGroupViewController.swift in Sources */,
+				CCBCE9CE274CF61E0002CB18 /* UserGroupVC+TableViewDataSource.swift in Sources */,
 				CC18F6FD276C8EEC00DED829 /* FriendPhotoVC+SwipeRecognizer.swift in Sources */,
 				CCD6CA0427C0D9F100D90109 /* FriendsItem.swift in Sources */,
+				CC284AB927D60E9600F1F343 /* RealmService.swift in Sources */,
 				CCA4870C2742642A003F270B /* AppDelegate.swift in Sources */,
 				CCD6C9FF27C0D7DC00D90109 /* FriendsResponse.swift in Sources */,
 				CC18F6F9276C789800DED829 /* SectionFriends.swift in Sources */,
@@ -588,19 +635,20 @@
 				CCD2E36B276DCBE100C5ECB7 /* CustomSegue.swift in Sources */,
 				CCD6CA1B27C4E12300D90109 /* Photo.swift in Sources */,
 				CCB7A683274CD11A00C9BB8D /* Group.swift in Sources */,
+				CC284AC027D63B7C00F1F343 /* RealmFriends.swift in Sources */,
 				CCD6CA1527C3E03C00D90109 /* PhotoItems.swift in Sources */,
-				CCBCE9DA274CFC190002CB18 /* AllGroupVC+FillData.swift in Sources */,
 				CC18F6FB276C7A9000DED829 /* FriendsLoaderService.swift in Sources */,
+				CC284AC427D8C3D700F1F343 /* RealmSearhGroups.swift in Sources */,
 				CCD6CA0B27C2379C00D90109 /* GroupsItem.swift in Sources */,
 				CCBCE9D4274CFB5E0002CB18 /* AllGroupViewController.swift in Sources */,
 				CCB7A681274CD11000C9BB8D /* Friends.swift in Sources */,
 				CCD6CA2227C4E76100D90109 /* SearchGroupsItems.swift in Sources */,
 				CCD6CA0927C2378900D90109 /* GroupsCount.swift in Sources */,
+				CC284AC627D8C4B800F1F343 /* RealmPhoto.swift in Sources */,
 				CC86BEC62770D888006F3144 /* CustomPopAnimate.swift in Sources */,
 				CCDF302727B533F100E893B5 /* Singleton.swift in Sources */,
 				CC3D91092750F4060043E20E /* GalleryFriendViewController.swift in Sources */,
 				CC7BC0A02756291C00B9C926 /* FriendsTableViewCell.swift in Sources */,
-				CCBCE9D2274CF6460002CB18 /* MyGroupVC+FillData.swift in Sources */,
 				CCDF302927BA4CDF00E893B5 /* VKLoginVC.swift in Sources */,
 				CCD6CA0227C0D8DE00D90109 /* FriendsCount.swift in Sources */,
 				CC0F1AB6275F588000E35737 /* LoadingScreenViewController.swift in Sources */,

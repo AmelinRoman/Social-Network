@@ -7,7 +7,8 @@
 
 import Foundation
 
-
+// MARK: PhotoSizes
+// - Model JSON
 struct PhotoSizes {
     var type: String
     var url: String

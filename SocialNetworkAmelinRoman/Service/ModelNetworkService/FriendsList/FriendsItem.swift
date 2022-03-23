@@ -9,7 +9,7 @@ import Foundation
 
 
 struct FriendsItems {
-    var id: Int?
+    var id: Int
     var firstName: String
     var lastName: String
     var photo: String
