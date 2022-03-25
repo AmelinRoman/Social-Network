@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: PhotoItems
 struct PhotoItems {
     var sizes: [PhotoSizes]
 }

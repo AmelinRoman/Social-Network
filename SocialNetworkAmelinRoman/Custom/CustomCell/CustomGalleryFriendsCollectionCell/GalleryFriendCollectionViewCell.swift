@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 // - MARK: Класс для работы с UICollectionViewCell для класса GalleryFriendViewController
 class GalleryFriendCollectionViewCell: UICollectionViewCell {
     // - Элементы в ячейке
@@ -22,10 +23,19 @@ class GalleryFriendCollectionViewCell: UICollectionViewCell {
         // - Обновление ячеек
         avatarFriend.image = nil
     }
+    func configure(model: RealmPhoto) {
+        guard let url = URL(string: model.url) else { return }
+        let imageUrl = ImageResource(downloadURL: url)
+        avatarFriend.kf.setImage(with: imageUrl)
+        avatarFriend.layer.cornerRadius = 15
+        customView.layer.backgroundColor = UIColor.black.cgColor
+        customView.layer.cornerRadius = 20
+    }
     // - Настройки ячейки
     func configure(/*image: UIImage?,*/ model: Photo) {
         guard let url = URL(string: model.photo) else { return }
-        avatarFriend.load(url: url)
+        let imageUrl = ImageResource(downloadURL: url)
+        avatarFriend.kf.setImage(with: imageUrl)
         avatarFriend.layer.cornerRadius = 15
         customView.layer.backgroundColor = UIColor.black.cgColor
         customView.layer.cornerRadius = 20

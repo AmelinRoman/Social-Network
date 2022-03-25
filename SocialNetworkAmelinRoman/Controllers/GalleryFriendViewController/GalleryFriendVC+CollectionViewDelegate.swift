@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+// - MARK:  Extension GalleryFriendViewController - UICollectionViewDelegate
 extension GalleryFriendViewController: UICollectionViewDelegate {
     // - Проверка segue и передача данных
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -17,15 +17,12 @@ extension GalleryFriendViewController: UICollectionViewDelegate {
            //let arrayFriendPhoto = sender as? [String],
            let destination = segue.destination as? FriendPhotoViewController {
             destination.namePhotoFriend = friendPhoto
-            destination.arrayPhoto = photoSizes
+            destination.arrayPhoto = photoGalleryRealm
         }
     }
    // - Обработка нажатия, передача данных и переход на следующий Controller
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let friendPhoto = photoSizes[indexPath.item].photo
+        let friendPhoto = photoGalleryRealm?[indexPath.item].url
         performSegue(withIdentifier: toPhotoSegue, sender: friendPhoto)
-        
     }
-   
 }

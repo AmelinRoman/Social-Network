@@ -7,12 +7,9 @@
 
 import UIKit
 
-
-
 extension FriendPhotoViewController {
  
     func configureFillData() {
         viewPhoto.layer.backgroundColor = UIColor.black.cgColor
     }
-    
 }

@@ -116,7 +116,7 @@ final class NetworkService {
                 let photoResponse = try JSONDecoder().decode(PhotoResponse.self, from: data)
                 for i in 0...photoResponse.response.items.count - 1 {
                     if let photoUrl = photoResponse.response.items[i].sizes.last?.url {
-                        photo.append(Photo.init(photo: photoUrl))
+                            photo.append(Photo.init(photo: photoUrl))
                     }
                 }
                 //  передача данных

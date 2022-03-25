@@ -7,7 +7,8 @@
 
 import Foundation
 
-
+// MARK: CountResponse
+// - Model JSON
 struct CountResponse {
     var items: [PhotoItems]
 }
