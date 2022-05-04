@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BottomTableViewCell" id="KGk-i7-Jjw" customClass="BottomTableViewCell" customModule="SocialNetworkAmelinRoman" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhR-9r-UNE">
+                        <rect key="frame" x="16" y="6.5" width="31" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="97k-ug-sPJ"/>
+                            <constraint firstAttribute="width" constant="31" id="XYK-O1-DQa"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="0"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAy-RG-atS">
+                        <rect key="frame" x="48" y="12" width="56" height="20"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="0"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERF-Um-6yg">
+                        <rect key="frame" x="112" y="12" width="36" height="20"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right" catalog="system" title="0"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KAy-RG-atS" firstAttribute="leading" secondItem="rhR-9r-UNE" secondAttribute="trailing" constant="1" id="0ru-yS-MHN"/>
+                    <constraint firstItem="rhR-9r-UNE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="33Q-eC-Glw"/>
+                    <constraint firstAttribute="bottom" secondItem="rhR-9r-UNE" secondAttribute="bottom" constant="6.5" id="4lo-4l-k1O"/>
+                    <constraint firstAttribute="bottom" secondItem="KAy-RG-atS" secondAttribute="bottom" constant="12" id="8r2-h5-lMx"/>
+                    <constraint firstItem="rhR-9r-UNE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ilb-hi-a7L"/>
+                    <constraint firstItem="ERF-Um-6yg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="SD0-pb-g3P"/>
+                    <constraint firstItem="ERF-Um-6yg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WEd-7u-esS"/>
+                    <constraint firstAttribute="bottom" secondItem="ERF-Um-6yg" secondAttribute="bottom" constant="12" id="Wle-2y-gmR"/>
+                    <constraint firstItem="KAy-RG-atS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="dAF-l8-ptB"/>
+                    <constraint firstAttribute="trailing" secondItem="ERF-Um-6yg" secondAttribute="trailing" constant="172" id="nas-Cb-8xs"/>
+                    <constraint firstItem="rhR-9r-UNE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6.5" id="nf9-ru-hrE"/>
+                    <constraint firstItem="KAy-RG-atS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vDT-5B-oaw"/>
+                    <constraint firstItem="ERF-Um-6yg" firstAttribute="leading" secondItem="KAy-RG-atS" secondAttribute="trailing" constant="8" symbolic="YES" id="zNh-z0-OAe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentButtom" destination="KAy-RG-atS" id="jEq-T7-mH4"/>
+                <outlet property="likeButtom" destination="rhR-9r-UNE" id="4g0-WC-vCB"/>
+                <outlet property="repostButtom" destination="ERF-Um-6yg" id="Ubb-VP-fDA"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="65.290178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
