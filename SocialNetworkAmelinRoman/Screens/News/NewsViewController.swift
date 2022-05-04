@@ -24,7 +24,7 @@ final class NewsViewController: UIViewController {
             }
         }
     }
-    
+    // pull reqest
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.global(qos: .background).async {
