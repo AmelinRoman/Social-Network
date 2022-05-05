@@ -7,6 +7,7 @@ target 'SocialNetworkAmelinRoman' do
   pod 'RealmSwift', '~>10'
   pod 'Alamofire', '~> 5.5'
   pod 'Kingfisher', '~> 7.0'
+  pod "PromiseKit", "~> 6.8"
 
 end
 
